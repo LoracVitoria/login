@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/login")
+@WebServlet(urlPatterns = {"","/login"})
 public class LoginServlet extends HttpServlet {
 
 
@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
         String passwordCerto = "admin";
 
 
-        if (login.equals(loginCerto) && password.equals(passwordCerto)) {
+        if (login!=null && login.equals(loginCerto) && password.equals(passwordCerto)) {
 
             HttpSession session = req.getSession();
 
@@ -37,11 +37,11 @@ public class LoginServlet extends HttpServlet {
 
             //System.out.println("/SessionLab/segura");
 
-            resp.sendRedirect("/SessionLab/segura");
+            resp.sendRedirect("/login_war/segura");
             RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/OutraServlet");
 
         } else {
-            resp.sendRedirect("/SessionLab/index.jsp?msg=senha incorreta");
+            resp.sendRedirect("/login_war/index.jsp?msg=senha incorreta");
             //System.out.println("/SessionLab/login.jsp?msg=senha incorreta");
         }
     }

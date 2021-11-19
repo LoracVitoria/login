@@ -4,7 +4,6 @@
 <head>
     <title>JSP - LOGIN E LOGOUT</title>
 
-
 </head>
 
 <script type='text/javascript'>
@@ -26,15 +25,19 @@
 
 <body>
 <h1><%= "Login e Logout!" %></h1>
+<br/>
 
-<form method="get" action="processa-form" enctype="multipart/form-data" name="loginservlet">
+
+<p>	${param.msg}</p>
+
+<form method="get" action="login" enctype="multipart/form-data" name="loginservlet">
 
     <label for="user-id">User: </label>
-    <input id="user-id" type="text" name="campo_user" value="name" />
+    <input id="user-id" type="text" name="campo_login" value="name" />
 
     <br/>
     <br/>
-    <label for="password-id">Nome: </label>
+    <label for="password-id">Password: </label>
     <input id="password-id" type="password" name="campo_password" value="name" />
 
     <br/>
