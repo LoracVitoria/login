@@ -28,7 +28,7 @@
 <br/>
 
 
-<p>	${param.msg}</p>
+<%--<p>	 ${param.msg}</p>--%>
 
 <form method="get" action="login" enctype="multipart/form-data" name="loginservlet">
 
