@@ -23,6 +23,7 @@ public class OutraServlet extends HttpServlet {
             }
 
             resp.getWriter().println("Você está logado no sistema!");
+            resp.getWriter().println("Para deslogar acesse: /desconectar");
 
         }
 
